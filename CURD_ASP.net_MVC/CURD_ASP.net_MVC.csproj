@@ -13,6 +13,8 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGenerators.Mvc" Version="8.0.3" />
     <PackageReference Include="Toolbelt.EntityFrameworkCore.AnnotationBasedModelBuilder" Version="5.0.1.1" />
   </ItemGroup>
 

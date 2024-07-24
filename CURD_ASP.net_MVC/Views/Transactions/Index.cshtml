@@ -1,0 +1,67 @@
+﻿@model IEnumerable<CURD_ASP.net_MVC.Models.Transaction>
+
+@{
+    ViewData["Title"] = "Index";
+    //Layout = "";
+}
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="AddorEdit">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AccountNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BankName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IFCCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Balance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BankName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IFCCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Balance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TransactionId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TransactionId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TransactionId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
